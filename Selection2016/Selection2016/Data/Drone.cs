@@ -16,7 +16,7 @@ namespace Selection2016.Data
 
     public int CalculeDistance(int x, int y)
     {
-      return (int)Math.Ceiling(Math.Sqrt(Math.Abs(this.X - x) ^ 2 + Math.Abs(this.Y - y) ^ 2));
+      return (int)Math.Ceiling(Math.Sqrt(Math.Pow(Math.Abs(this.X - x), 2) + Math.Pow(Math.Abs(this.Y - y), 2)));
     }
 
     public int PoidsCourant
