@@ -25,5 +25,11 @@ namespace Selection2016.Data
 
       return resultat;
     }
+
+    public int CalculeDistance(Drone drone)
+    {
+      return drone.CalculeDistance(this.X, this.Y);
+    }
+
   }
 }
