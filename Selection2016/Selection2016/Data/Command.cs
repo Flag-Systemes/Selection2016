@@ -14,7 +14,7 @@ namespace Selection2016.Data
 
     public Order Commande { get; set; }
 
-    public Product Produit{ get; set; }
+    public Product Produit { get; set; }
 
     public int QteLivree { get; set; }
 
@@ -41,7 +41,8 @@ namespace Selection2016.Data
     }
   }
 
-  public enum CommandType{
+  public enum CommandType
+  {
     Load = 'L',
     Deliver = 'D',
     Unload = 'U',
