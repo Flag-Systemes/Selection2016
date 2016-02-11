@@ -13,6 +13,7 @@ namespace Selection2016.Data
     public decimal CompletionProduct { get; set; }
     public int DroneCost { get; set; }
     public int CostOrder { get; set; }
+    public List<OrderLine> Produits { get; set; }
 
     public int CompareTo(object obj)
     {

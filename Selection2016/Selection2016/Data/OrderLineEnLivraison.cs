@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Selection2016.Data
 {
-  public class OrderLine
+  public class OrderLineEnLivraison
   {
     public int IdCommande { get; set; }
 
@@ -31,5 +31,7 @@ namespace Selection2016.Data
         return (this.QteCommandee - this.QteLivree) * this.Produit.Poids;
       }
     }
+
+    public int TourAvantLivraison { get; set; }
   }
 }

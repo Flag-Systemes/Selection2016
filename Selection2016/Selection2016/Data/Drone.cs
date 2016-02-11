@@ -14,7 +14,7 @@ namespace Selection2016.Data
 
     public int Y { get; set; }
 
-    public Dictionary<Order, List<OrderLine>> CommandesPartielles { get; set; }
+    public Dictionary<Order, List<OrderLineEnLivraison>> CommandesPartielles { get; set; }
 
     public int CalculeDistance(int x, int y)
     {
@@ -27,6 +27,14 @@ namespace Selection2016.Data
       {
         return this.CommandesPartielles.Sum(item1 => item1.Value.Sum(item2 => item2.Poids));
       }
+    }
+
+    public bool EnVol 
+    { 
+      get 
+      {
+        return CommandesPartielles.All(c => c.Value.Max(o => o.TourAvantLivraison) > 0);
+      } 
     }
   }
 }

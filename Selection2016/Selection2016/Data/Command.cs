@@ -12,7 +12,7 @@ namespace Selection2016.Data
 
     public CommandType TypeOrdre { get; set; }
 
-    public Order Commande { get; set; }
+    public int IdOrder { get; set; }
 
     public Product Produit { get; set; }
 
@@ -28,7 +28,7 @@ namespace Selection2016.Data
       resultat.Append(this.TypeOrdre.ToString());
       if (this.TypeOrdre != CommandType.Wait)
       {
-        resultat.Append(this.Commande.Id);
+        resultat.Append(this.IdOrder);
         resultat.Append(this.Produit.Id);
         resultat.Append(this.QteLivree);
       }

@@ -49,6 +49,7 @@
     <Compile Include="Data\Grid.cs" />
     <Compile Include="Data\Order.cs" />
     <Compile Include="Data\OrderCost.cs" />
+    <Compile Include="Data\OrderLineEnLivraison.cs" />
     <Compile Include="Data\OrderLine.cs" />
     <Compile Include="Data\Ordonanceur.cs" />
     <Compile Include="Data\Product.cs" />
