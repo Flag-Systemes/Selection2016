@@ -40,11 +40,15 @@ namespace Selection2016.Data
         {
           var listeCost = new List<OrderCost>();
           var currentStock = entrepot.CloneRepartitionProduit();
+          
           foreach (var order in Commandes)
           {
             OrderCost oc = new OrderCost();
-            oc.CostOrder = order.Lignes.Sum( p => Math.Min(p.QteCommandee, currentStock[p.Produit])) / order.Lignes.Sum(p => p.QteCommandee);
-          
+            oc.CompletionProduct = order.Lignes.Sum( p => Math.Min(p.QteCommandee, currentStock[p.Produit])) / order.Lignes.Sum(p => p.QteCommandee);
+            oc.DroneCost = this.Drones.Min(d => entrepot.CalculeDistance(d));
+            oc.CostOrder = entrepot.CalculeDistance(order);
+            oc.OrderID = order.Id;
+            listeCost.Add(oc);
           }
         }        
       }while (Grid.TourCourrant < Grid.NbTours);

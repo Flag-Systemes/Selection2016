@@ -9,6 +9,7 @@ namespace Selection2016.Data
   public class OrderCost : IComparable
   {
     public int OrderID { get; set; }
+    public int DroneID { get; set; }
     public decimal CompletionProduct { get; set; }
     public int DroneCost { get; set; }
     public int CostOrder { get; set; }
