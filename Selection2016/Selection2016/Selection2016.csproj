@@ -49,6 +49,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Inputs\busy_day.in" />
+    <None Include="Inputs\mother_of_all_warehouses.in" />
+    <None Include="Inputs\redundancy.in" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
