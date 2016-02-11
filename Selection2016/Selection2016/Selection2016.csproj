@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\Command.cs" />
     <Compile Include="Data\Drone.cs" />
     <Compile Include="Data\Grid.cs" />
     <Compile Include="Data\Order.cs" />

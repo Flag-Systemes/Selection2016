@@ -8,7 +8,7 @@ namespace Selection2016.Data
 {
   public class Product
   {
-    public int Type { get; set; }
+    public int Id { get; set; }
 
     public int Poids { get; set; }
   }

@@ -8,6 +8,8 @@ namespace Selection2016.Data
 {
   public class OrderLine
   {
+    public int IdCommande { get; set; }
+
     public Product Produit { get; set; }
 
     public int QteLivree { get; set; }

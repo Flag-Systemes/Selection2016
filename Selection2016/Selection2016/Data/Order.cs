@@ -8,6 +8,8 @@ namespace Selection2016.Data
 {
   public class Order
   {
+    public int Id { get; set; }
+
     public List<OrderLine> Lignes { get; set; }
 
     public int X { get; set; }

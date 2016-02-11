@@ -36,7 +36,7 @@ namespace Selection2016
       grid.NbColonnes = ligne[1];
       for (int i = 0; i < ligne[2]; i++)
       {
-        drones.Add(new Drone());
+        drones.Add(new Drone() { Id = i });
       }
       grid.NbTours = ligne[3];
       grid.PoidsMax = ligne[4];
@@ -54,7 +54,7 @@ namespace Selection2016
       ligne = FileUtils.Split<int>(input[ligneCourante], ' ');
       for (int i = 0; i < ligne.Count; i++)
       {
-        produits[i].Type = i;
+        produits[i].Id = i;
         produits[i].Poids = ligne[i];
       }
       ligneCourante++;
@@ -93,7 +93,7 @@ namespace Selection2016
       ligne = FileUtils.Split<int>(input[ligneCourante], ' ');
       for (int i = 0; i < ligne[0]; i++)
       {
-        commandes.Add(new Order());
+        commandes.Add(new Order() { Id = i });
       }
       ligneCourante++;
 
@@ -113,7 +113,7 @@ namespace Selection2016
           Product prod = produits[item];
           if (!commande.Lignes.Any(odligne => odligne.Produit == prod))
           {
-            commande.Lignes.Add(new OrderLine() { Produit = prod, QteCommandee = 0, QteLivree = 0 });
+            commande.Lignes.Add(new OrderLine() { IdCommande = commande.Id, Produit = prod, QteCommandee = 0, QteLivree = 0 });
           }
           commande.Lignes.First(odligne => odligne.Produit == prod).QteCommandee++;
         }
