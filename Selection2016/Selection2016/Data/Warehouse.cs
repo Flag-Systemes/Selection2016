@@ -13,5 +13,10 @@ namespace Selection2016.Data
     public int Y { get; set; }
 
     public Dictionary<Product, int> RepartitionProduit { get; set; }
+
+    public Dictionary<Product, int> CloneRepartitionProduit()
+    {
+      return new Dictionary<Product, int>();
+    }
   }
 }
