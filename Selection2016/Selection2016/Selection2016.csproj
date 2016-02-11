@@ -56,10 +56,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Inputs\busy_day.in" />
-    <None Include="Inputs\custom_test.in" />
-    <None Include="Inputs\mother_of_all_warehouses.in" />
-    <None Include="Inputs\redundancy.in" />
+    <None Include="Inputs\busy_day.in">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Inputs\custom_test.in">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Inputs\mother_of_all_warehouses.in">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Inputs\redundancy.in">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

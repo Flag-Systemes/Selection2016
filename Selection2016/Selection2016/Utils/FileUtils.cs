@@ -11,19 +11,56 @@ namespace Selection2016.Utils
 
     private static StreamWriter _output;
 
-    public static string FileIn1 { get { return "busy_day.in"; } }
+    public static string FileIn0 { get { return "Inputs/custom_test.in"; } }
 
-    public static string FileOut1 { get { return "busy_day.out"; } }
+    public static string FileOut0 { get { return "Outputs/custom_test.out"; } }
 
-    public static string FileIn2 { get { return "mother_of_all_warehouses.in"; } }
+    public static string FileIn1 { get { return "Inputs/busy_day.in"; } }
 
-    public static string FileOut2 { get { return "mother_of_all_warehouses.out"; } }
+    public static string FileOut1 { get { return "Outputs/busy_day.out"; } }
 
-    public static string FileIn3 { get { return "redundancy.in"; } }
+    public static string FileIn2 { get { return "Inputs/mother_of_all_warehouses.in"; } }
 
-    public static string FileOut3 { get { return "redundancy.out"; } }
+    public static string FileOut2 { get { return "Outputs/mother_of_all_warehouses.out"; } }
+
+    public static string FileIn3 { get { return "Inputs/redundancy.in"; } }
+
+    public static string FileOut3 { get { return "Outputs/redundancy.out"; } }
 
     public static string NewLine { get { return Environment.NewLine; } }
+
+    public static List<string> In0
+    {
+      get
+      {
+        if (FileUtils._input == null)
+        {
+          string line;
+          FileUtils._input = new List<string>();
+          StreamReader input = new StreamReader(FileUtils.FileIn0);
+
+          while ((line = input.ReadLine()) != null)
+          {
+            FileUtils._input.Add(line);
+          }
+        }
+
+        return FileUtils._input;
+      }
+    }
+
+    public static StreamWriter Output0
+    {
+      get
+      {
+        if (FileUtils._output == null)
+        {
+          FileUtils._output = new StreamWriter(FileUtils.FileOut0);
+        }
+
+        return FileUtils._output;
+      }
+    }
 
     public static List<string> In1
     {
