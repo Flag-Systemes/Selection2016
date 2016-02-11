@@ -46,6 +46,7 @@
     <Compile Include="Data\Drone.cs" />
     <Compile Include="Data\Grid.cs" />
     <Compile Include="Data\Order.cs" />
+    <Compile Include="Data\OrderLine.cs" />
     <Compile Include="Data\Product.cs" />
     <Compile Include="Data\Warehouse.cs" />
     <Compile Include="Program.cs" />

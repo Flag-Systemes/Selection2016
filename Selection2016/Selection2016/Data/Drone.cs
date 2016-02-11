@@ -12,7 +12,7 @@ namespace Selection2016.Data
 
     public int Y { get; set; }
 
-    public Dictionary<Order, List<Product>> CommandesPartielles { get; set; }
+    public Dictionary<Order, List<OrderLine>> CommandesPartielles { get; set; }
 
     public int CalculeDistance(int x, int y)
     {

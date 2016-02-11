@@ -8,7 +8,7 @@ namespace Selection2016.Data
 {
   public class Order
   {
-    public Dictionary<Product, Tuple<int, int>> Produits { get; set; }
+    public List<OrderLine> Lignes { get; set; }
 
     public int X { get; set; }
 
@@ -18,10 +18,10 @@ namespace Selection2016.Data
     {
       get
       {
-        return this.Produits.Sum(item => item.Key.Poids);
+        return this.Lignes.Sum(item => item.Poids);
       }
     }
 
-
+    public int TourCompletion { get; set; }
   }
 }
