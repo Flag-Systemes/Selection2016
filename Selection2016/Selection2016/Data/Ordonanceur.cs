@@ -15,6 +15,18 @@ namespace Selection2016.Data
     List<Product> Produits { get; set; }
     
     // TODO liste d'ordres ??
+    public int DroneLePlusProche(Warehouse entrepot, out Drone drone)
+    {
+      drone = this.Drones.OrderBy(item => entrepot.CalculeDistance(item)).FirstOrDefault();
+      if (drone != null)
+      {
+        return entrepot.CalculeDistance(drone);
+      }
+      else
+      {
+        return 0;
+      }
+    }
 
     public void MainLoop()
     {
