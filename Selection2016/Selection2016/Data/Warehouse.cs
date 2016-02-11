@@ -16,7 +16,14 @@ namespace Selection2016.Data
 
     public Dictionary<Product, int> CloneRepartitionProduit()
     {
-      return new Dictionary<Product, int>();
+      Dictionary<Product, int> resultat = new Dictionary<Product, int>();
+
+      foreach(KeyValuePair<Product, int> item in this.RepartitionProduit)
+      {
+        resultat.Add(item.Key, item.Value);
+      }
+
+      return resultat;
     }
   }
 }
