@@ -56,6 +56,7 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="Inputs\busy_day.in" />
+    <None Include="Inputs\custom_test.in" />
     <None Include="Inputs\mother_of_all_warehouses.in" />
     <None Include="Inputs\redundancy.in" />
   </ItemGroup>
