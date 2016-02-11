@@ -31,5 +31,9 @@ namespace Selection2016.Data
       return drone.CalculeDistance(this.X, this.Y);
     }
 
+    public int CalculeDistance(Order commande)
+    {
+      return commande.CalculeDistance(this.X, this.Y);
+    }
   }
 }
