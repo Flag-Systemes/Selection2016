@@ -13,5 +13,27 @@ namespace Selection2016.Data
     public int Y { get; set; }
 
     public Dictionary<Product, int> RepartitionProduit { get; set; }
+
+    public Dictionary<Product, int> CloneRepartitionProduit()
+    {
+      Dictionary<Product, int> resultat = new Dictionary<Product, int>();
+
+      foreach(KeyValuePair<Product, int> item in this.RepartitionProduit)
+      {
+        resultat.Add(item.Key, item.Value);
+      }
+
+      return resultat;
+    }
+
+    public int CalculeDistance(Drone drone)
+    {
+      return drone.CalculeDistance(this.X, this.Y);
+    }
+
+    public int CalculeDistance(Order commande)
+    {
+      return commande.CalculeDistance(this.X, this.Y);
+    }
   }
 }
