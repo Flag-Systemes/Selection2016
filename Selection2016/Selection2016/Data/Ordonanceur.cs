@@ -38,6 +38,11 @@ namespace Selection2016.Data
             oc.OrderID = order.Id;
             listeCost.Add(oc);
           }
+          listeCost.Sort();
+
+          foreach (OrderCost oc in listeCost) 
+          {
+          }
         }        
       }while (Grid.TourCourrant < Grid.NbTours);
     }
