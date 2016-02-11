@@ -60,6 +60,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="delivery.pdf" />
     <None Include="Inputs\busy_day.in">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
